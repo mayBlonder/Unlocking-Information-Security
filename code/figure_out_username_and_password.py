@@ -7,7 +7,7 @@ import re
 
 #### Don't change the code until this line ####
 
-def show_username_password()-None:
+def show_username_password()->None:
     packets = rdpcap(recording_path)
     for packet in packets:
         p = re.findall(".*password(.*)", packet.load.decode("utf8"))
